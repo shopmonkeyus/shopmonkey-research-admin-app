@@ -8,7 +8,7 @@ export const config = {
 export default async function handler(request: NextRequest) {
   try {
     const logoData = await fetch(
-      new URL("../../../public/assets/icons/sm_face.png.png", import.meta.url),
+      new URL("../../../public/assets/icons/sm_face.png", import.meta.url),
     ).then((res) => res.arrayBuffer());
     const { searchParams } = new URL(request.url);
 
